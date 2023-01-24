@@ -12,8 +12,12 @@
 % You should have received a copy of the license along with this
 % work. If not, see <http://creativecommons.org/licenses/by-nc/4.0/>.
 
-clear;
+% this script uses GIBBON- and MSK-STAPLE toolboxes
+% https://github.com/modenaxe/msk-STAPLE
+% https://github.com/gibbonCode/
 
+clear;
+addpath(genpath('./lib'));
 fname = './exampleData/R_Fiducials.mrk.json';
 side = 'R';
 % if a STL named " *(side)_femur*.stl" is available in the same folder, it

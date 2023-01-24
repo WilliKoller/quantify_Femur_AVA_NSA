@@ -12,6 +12,10 @@
 % You should have received a copy of the license along with this
 % work. If not, see <http://creativecommons.org/licenses/by-nc/4.0/>.
 
+% this script uses GIBBON- and MSK-STAPLE toolboxes
+% https://github.com/modenaxe/msk-STAPLE
+% https://github.com/gibbonCode/
+
 clear;
 [file, path] = uigetfile('*.stl');
 filenameNoExt = strrep(file, '.stl', '');

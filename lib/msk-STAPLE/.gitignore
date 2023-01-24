@@ -1,0 +1,36 @@
+# geometry files
+*.stl
+*.igs
+*.msh
+*.vtk
+*.iv
+*.obj
+
+# MAF files
+.msf
+
+# MATLAB
+*.asv
+Miranda2010_*ACS.m
+
+# folders
+__*
+/_old
+bone_datasets/
+OpenSim_models/
+docs/*.html
+docs/*.m
+tests/models_from_tests/
+*.zip
+/*_safe/
+*ISSUE*/
+
+# openSim files
+*.log
+*.osim
+# used for checking intermediate steps of modelling
+*.xml
+
+#vim files
+*.*~
+
