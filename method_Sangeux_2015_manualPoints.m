@@ -18,28 +18,21 @@
 
 clear;
 addpath(genpath('./lib'));
-fname = './exampleData/R_Fiducials.mrk.json';
-side = 'R';
-% if a STL named " *(side)_femur*.stl" is available in the same folder, it
-% is used for plotting and also to calculate AVA in transverse plane
-
-fid = fopen(fname);
-raw = fread(fid,inf);
-str = char(raw');
-fclose(fid);
-data = jsondecode(str);
-
-folder = fileparts(fname);
-files = dir(folder);
+side = 'L';
 STLfileName = [];
 
-for k = 1 : length(files)
-    if contains(files(k).name, '.stl') && contains(files(k).name, [side '_femur'])
-        STLfileName = files(k).name;
-        break;
-    end
-end
-
+data.markups.controlPoints(1).label = 'HJC';
+data.markups.controlPoints(1).position = [-0.056276 0.85151 0.07726]';
+data.markups.controlPoints(2).label = 'GT';
+data.markups.controlPoints(2).position = [-0.0788038 0.80126 0.13722]';
+data.markups.controlPoints(3).label = 'PS';
+data.markups.controlPoints(3).position = [-0.0662013 0.780346 0.116023]';
+data.markups.controlPoints(4).label = 'DS';
+data.markups.controlPoints(4).position = [-0.0467056 0.439209 0.07726]';
+data.markups.controlPoints(5).label = 'MC';
+data.markups.controlPoints(5).position = [-0.0790706 0.439788 0.0532338]';
+data.markups.controlPoints(6).label = 'LC';
+data.markups.controlPoints(6).position = [-0.0790706 0.439788 0.100893]';
 
 for i = 1 : length(data.markups.controlPoints)
     switch data.markups.controlPoints(i).label
